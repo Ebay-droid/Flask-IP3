@@ -6,9 +6,18 @@
     {%block content%}
 
       <div>
-        {{macro.displayArticleList(cnn)}}
+        <h2>General</h2>
+        {{macro.displayArticleList(general)}}
       </div>
-         
+      <div>
+        <h2>Sports</h2>
+        {{macro.displayArticleList(sports)}}
+      </div>
+      <div>
+        <h2>Entertainment</h2>
+        {{macro.displayArticleList(entertainment)}}
+      </div>
+               
 
     {%endblock%}
 

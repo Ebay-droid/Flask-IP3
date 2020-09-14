@@ -1,10 +1,16 @@
 {% macro displaySourceList(sources_list) %}
    
     {% for source in sources_list %}
-    <div class=" jumbotron">
-    <h3>{{source.name}}</h3>
-    <p>{{source.description}}</p>
-        <button>Visit</button>
+    <div class=" card-deck " style="background-color: wheat;">
+        <div class="card-columns">
+            <div class="card col-md-4" >
+                <h3 class="card-header">{{source.name}}</h3>
+                <p class="card-body">{{source.description}}</p>
+                <button class="btn btn-success">Visit</button>
+            </div>
+
+        </div>
+       
 
     </div>
     {% endfor %}
@@ -17,17 +23,17 @@
 <div class="container ">
     <div class=" card-columns ">
         {% for article in articles_list %}
-        <div class="card col-md-3">
-            <div class="card-header">
-                <h4><a target="_blank" href="{{article.url}}">{{article.title}}</a></h4>
-            </div>
-            <div class="card-body">
-                <img class=" card-img img-responsive" src="{{article.urlToImage}}" alt="">
-                <p class="card-body">{{article.description}}</p>
-            </div>
+                <div class="card col-md-3">
+                    <div class="card-header">
+                        <h4><a target="_blank" href="{{article.url}}">{{article.title}}</a></h4>
+                    </div>
+                    <div class="card-body">
+                        <img class=" card-img img-responsive" src="{{article.urlToImage}}" alt="">
+                        <p class="card-body">{{article.description}}</p>
+                    </div>
 
-        </div>
-    
+                </div>
+            
         {% endfor %}
     </div>
 
