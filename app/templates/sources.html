@@ -3,9 +3,24 @@
 
 {%block content%}
 <div class="container">
-  {{macro.displaySourceList(general)}}
-  <!-- {{macro.displaySourceList(entertainment)}}
-  {{macro.displaySourceList(sports)}} -->
+  <div>
+    <h1>General</h1>
+  {{macro.displaySourceList(general)}} <br>
+  </div>
+ 
+  <div>
+    <h1>Entertainment</h1>
+   {{macro.displaySourceList(entertainment)}} <br>
+  </div>
+    
+  <div>
+    <h1>Entertainment</h1>
+    {{macro.displaySourceList(entertainment)}}
+  </div>
+  
+
+  <h1>Sports</h1>
+  {{macro.displaySourceList(sports)}} 
 
 
 </div>

@@ -1,24 +1,21 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
+{% block content%}
+<!-- <div class="card col-md-3">
+  <div class="card-header">
+      <h4><a target="_blank" href="{{article.url}}">{{article.title}}</a></h4>
+  </div>
+  <div class="card-body">
+      <img class=" card-img img-responsive" src="{{article.urlToImage}}" alt="">
+      <p class="card-body">{{article.description}}</p>
+      <p class="card-footer">{{article.publishedAt}}</p>
+  </div>
 
-{% macro displayArticleList(sources_list) %}
-
-    {%block content%}
-
-      <div>
-        <h2>CNN</h2>
-        {{macro.displayArticleList(cnn)}}
-      </div>
-      <div>
-        <h2>REUTERS</h2>
-        {{macro.displayArticleList(reuters)}}
-      </div>
-
-               
-
-    {%endblock%}
+</div> -->
+<div>
+{{macro.displayArticleList(article)}}
+</div>
 
 
-{%endmacro%}
 
-
+{%endblock%}

@@ -6,7 +6,7 @@
             <div class="card col-md-4" >
                 <h3 class="card-header">{{source.name}}</h3>
                 <p class="card-body">{{source.description}}</p>
-                <button class="btn btn-success">Visit</button>
+                <a target="_blank" href="/Articles/{{source.id}}"><button class="btn btn-success">Visit</button></a>
             </div>
 
         </div>
@@ -19,10 +19,10 @@
 
 {% endmacro %}
 
-{% macro displayArticleList(articles_list) %}
+{% macro displayArticleList(articles_object) %}
 <div class="container ">
     <div class=" card-columns ">
-        {% for article in articles_list %}
+        {% for article in articles_object %}
                 <div class="card col-md-3">
                     <div class="card-header">
                         <h4><a target="_blank" href="{{article.url}}">{{article.title}}</a></h4>
@@ -30,6 +30,7 @@
                     <div class="card-body">
                         <img class=" card-img img-responsive" src="{{article.urlToImage}}" alt="">
                         <p class="card-body">{{article.description}}</p>
+                        <p class="card-footer">{{article.publishedAt}}</p>
                     </div>
 
                 </div>
@@ -40,5 +41,5 @@
 </div>
    
 
-{% endmacro %}
+{% endmacro %} 
 
