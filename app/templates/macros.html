@@ -14,16 +14,15 @@
 {% endmacro %}
 
 {% macro displayArticleList(articles_list) %}
-
+<div class="container-fluid">
     {% for article in articles_list %}
-    <div class="container-fluid row">
-        <div class="card col-md-2">
-            <img src="{{article.urlToImage}}" alt="">
-            <h4 class="card-title">{{article.title}}</h4>
-        </div>
-       
-    </div>
+
+    <img src="{{article.urlToImage}}" alt="">
+    <h4 class="card-title">{{article.title}}</h4>
+    <p>{{acrticle.title}}</p>
     {% endfor %}
+</div>
+   
 
 {% endmacro %}
 

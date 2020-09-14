@@ -49,6 +49,7 @@ def process_results(sources_list):
   
     
     return news_results
+    
   
   
 def get_article(source):
