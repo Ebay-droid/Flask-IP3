@@ -19,9 +19,11 @@ def News():
   return render_template('sources.html',general =general_news,sports= sports_news,entertainment=entertainment_news)
  
  
-@main.route('/reuters')
+@main.route('/Articles')
 def Article():
   
-  reuters = get_article('reuters')
+    cnn_news = get_article('cnn')
   
-  return render_template('articles.html', reuters= reuters)  
+    return render_template('articles.html',cnn= cnn_news) 
+
+# @main.route('/r') 
