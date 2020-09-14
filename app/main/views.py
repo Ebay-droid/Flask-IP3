@@ -22,10 +22,9 @@ def News():
 @main.route('/Articles')
 def Article():
   
-   general = get_article('general')
-   sports = get_article('sports')
-   entertainment = get_article('entertainment')
+    cnn_news = get_article('cnn')
+    reuters =get_article('reuters')
   
-   return render_template('articles.html',general=general, sports= sports, entertainment= entertainment) 
+    return render_template('articles.html',cnn= cnn_news,reuters=reuters) 
 
 # @main.route('/r') 

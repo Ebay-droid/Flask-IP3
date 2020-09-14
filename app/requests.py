@@ -29,7 +29,7 @@ def get_sources(category):
       sources_results_list = get_sources_response['sources']
       sources_results = process_results(sources_results_list)
       
-     
+      
   return sources_results  
   
 def process_results(sources_list):
@@ -47,26 +47,24 @@ def process_results(sources_list):
     news_results.append(sources_object)
     
   
-  
-  return news_results
     
+  return news_results
   
   
-def get_article(category):
-  get_articles_url = article_url.format(category, api_key)
+def get_article(source):
+  get_articles_url = article_url.format(source, api_key)
   
   with urllib.request.urlopen(get_articles_url) as url:
     source_articles_data=url.read()
     source_articles_response= json.loads(source_articles_data)
     
-    article_results =None
+    articles_results =None
     
   if source_articles_response ['articles']:
         articles_results_list = source_articles_response['articles']
-        article_results = process_articles(articles_results_list)
+        articles_results = process_articles(articles_results_list)
 
-        
-        return article_results
+        return articles_results
     
     
     

@@ -7,6 +7,8 @@ class Config:
   
   ARTICLES_API_BASE = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
   
+  ALL_ARTICLES_API = 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
+  
 class ProdConfig(Config):
   pass
   
