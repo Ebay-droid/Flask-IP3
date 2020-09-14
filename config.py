@@ -5,7 +5,7 @@ class Config:
   
   NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
   
-  ARTICLES_API_BASE ='https://newsapi.org/v2/top-headlines?language=en&category={}apiKey={}'
+  ARTICLES_API_BASE = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
   
 class ProdConfig(Config):
   pass
