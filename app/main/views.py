@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..requests import get_sources
+from ..requests import get_sources,get_article
 
 
 @main.route('/')
@@ -17,4 +17,11 @@ def News():
   entertainment_news = get_sources ('entertainment')
   
   return render_template('sources.html',general =general_news,sports= sports_news,entertainment=entertainment_news)
+ 
+ 
+@main.route('/reuters')
+def Article():
   
+  reuters = get_article('reuters')
+  
+  return render_template('articles.html', reuters= reuters)  

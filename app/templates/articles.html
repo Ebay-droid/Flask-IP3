@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% macro displayArticleList(sources_list) %}
+
+    {%block content%}
+
+      <div>
+        {{macro.displayArticleList(reuters)}}
+      </div>
+         
+
+    {%endblock%}
+
+
+{%endmacro%}
+
+

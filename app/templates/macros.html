@@ -1,11 +1,29 @@
 {% macro displaySourceList(sources_list) %}
    
-    {%for source in sources_list%}
-        <h3>{{source.name}}</h3>
-        <!-- <p>{{source.description}}</p>
-            <button>Visit</button> -->
+    {% for source in sources_list %}
+    <div class=" jumbotron">
+    <h3>{{source.name}}</h3>
+    <p>{{source.description}}</p>
+        <button>Visit</button>
+
+    </div>
     {% endfor %}
 
    
 
 {% endmacro %}
+
+{% macro displayArticleList(articles_list) %}
+
+    {% for article in articles_list %}
+    <div class="container-fluid row">
+        <div class="card col-md-2">
+            <img src="{{article.urlToImage}}" alt="">
+            <h4 class="card-title">{{article.title}}</h4>
+        </div>
+       
+    </div>
+    {% endfor %}
+
+{% endmacro %}
+
