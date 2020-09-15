@@ -46,7 +46,7 @@ def News():
 def Articles(id):
     
     article = get_source(id)
-    print(len(article))
+    # print(len(article))
     
 
   
