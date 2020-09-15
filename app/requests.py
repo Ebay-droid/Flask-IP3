@@ -61,7 +61,9 @@ def get_source(id):
     source_articles_data=url.read()
     source_articles_response= json.loads(source_articles_data)
     
-    articles_object =[]
+    
+    articles_object = None
+    article_results =[]
     
     if source_articles_response:
         source= source_articles_response.get('source')
@@ -73,8 +75,9 @@ def get_source(id):
         publishedAt = source_articles_response.get('publishedAt')
         
         articles_object = Articles(source,author,title,description,url,urlToImage,publishedAt)
-        # import pdb; pdb.set_trace()
-        return articles_object
+        article_results.append(articles_object)
+        
+        return article_results
         
 
     
