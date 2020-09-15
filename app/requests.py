@@ -60,7 +60,8 @@ def get_source(id):
   with urllib.request.urlopen(get_articles_url) as url:
     source_articles_data=url.read()
     source_articles_response= json.loads(source_articles_data)
-    articles_object =None
+    
+    articles_object =[]
     
     if source_articles_response:
         source= source_articles_response.get('source')
@@ -72,9 +73,10 @@ def get_source(id):
         publishedAt = source_articles_response.get('publishedAt')
         
         articles_object = Articles(source,author,title,description,url,urlToImage,publishedAt)
-        
+        # import pdb; pdb.set_trace()
         return articles_object
-    
+        
+
     
   # if source_articles_response ['articles']:
   #       articles_results_list = source_articles_response['articles']
