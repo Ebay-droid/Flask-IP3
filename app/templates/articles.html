@@ -9,18 +9,20 @@
 <!-- Content block -->
 
 {% block content%}
-<div class="container ">
+<div class="container-fluid ">
   <div class=" card-columns ">
-    <h1>ARTICLES</h1>
-      {% for article in article %}
-              <div class="card col-md-3">
+          {% for article in article %}
+              <div class="card ">
                   <div class="card-header">
                       <h4><a target="_blank" href="{{article.url}}">{{article.title}}</a></h4>
                   </div>
                   <div class="card-body">
-                      <img class=" card-img img-responsive" src="{{article.urlToImage}}" alt="">
-                      <p class="card-body">{{article.description}}</p>
-                      <p class="card-footer">{{article.publishedAt}}</p>
+                      <img class="  card-img" src="{{article.urlToImage}}" alt="">
+                      <hr>
+                      <p>{{article.description}}</p>
+                  </div>
+                  <div class="card-footer">
+                    <p >{{article.publishedAt}}</p>
                   </div>
 
               </div>
@@ -29,9 +31,7 @@
   </div>
 
 </div>
-<!-- <div>
-{{macro.displayArticleList(article)}}
-</div> -->
+
 
 
 

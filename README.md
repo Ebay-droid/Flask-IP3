@@ -9,7 +9,8 @@ This application consumees the News API to give you the latest news from differe
 ### Technology Used:
 This web application was created using  python flask and the styling was done using Bootstrap
 
-### Installation
+### Installation:
 to be able to view this app please click here
 
-### Licence
+### Licence:
+https://raw.githubusercontent.com/Ebay-droid/Flask-IP3/master/LICENSE

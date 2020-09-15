@@ -1,18 +1,25 @@
+
 {% macro displaySourceList(sources_list) %}
-<div class=" " >
-    {% for source in sources_list %}
-        <div >
-            <div class="" >
-                <h2 class="">{{source.name}}</h2>
-                <p class="">{{source.description}}</p>
-                <a target="_blank" href="/Articles/{{source.id}}"><button class="btn btn-success">Visit</button></a>
+<div class="container-fluid " >
+    <div class="card-columns">
+        {% for source in sources_list %}
+            <div class="card">
+                <div class="card-header" >
+                    <h2 class="card-header">{{source.name}}</h2>
+                </div>
+                <div class="card-body">
+                    <p >{{source.description}}</p>
+                    <a target="_blank" href="/Articles/{{source.id}}"><button class="btn btn-success">Visit</button></a> 
+                </div>  
+                
+
             </div>
+        
 
-        </div>
-       
 
+        {% endfor %}
+    </div>
 </div>
-    {% endfor %}
 
    
 
