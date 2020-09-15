@@ -1,8 +1,9 @@
-# Title
+# Title : News-Factor
 
-## Author
+## Author :Ebenezer Gakuo
 
-## Description
+## Description :
+This application consumees the News API to give you the latest news from different sources
 
 ### Technology Used:
 

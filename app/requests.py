@@ -66,18 +66,20 @@ def get_source(id):
     article_results =[]
     
     if source_articles_response:
-        source= source_articles_response.get('source')
-        author = source_articles_response.get('author')
-        title = source_articles_response.get ('title')
-        description = source_articles_response.get('description')
-        url =source_articles_response.get ('url')
-        urlToImage=source_articles_response.get('urlToImage')
-        publishedAt = source_articles_response.get('publishedAt')
+      for article in source_articles_response.get('articles'):
+        
+        source= article.get('source')
+        author = article.get('author')
+        title = article.get ('title')
+        description = article.get('description')
+        url =article.get ('url')
+        urlToImage=article.get('urlToImage')
+        publishedAt = article.get('publishedAt')
         
         articles_object = Articles(source,author,title,description,url,urlToImage,publishedAt)
         article_results.append(articles_object)
         
-        return article_results
+    return article_results
         
 
     
