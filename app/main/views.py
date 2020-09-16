@@ -19,28 +19,7 @@ def News():
   return render_template('sources.html',general =general_news,sports= sports_news,entertainment=entertainment_news)
  
  
-# @main.route('/Articles/cnn')
-# def cnn_articles():
-  
-#     cnn_news = get_article('cnn')
-   
-  
-#     return render_template('articles.html',cnn= cnn_news) 
 
-# @main.route('/Articles/reuters')
-# def  reuters_articles():
-  
-#   reuters = get_article('reuters')
-  
-#   return render_template('articles.html', reuters =reuters)
-
-
-# @main.route('/Articles/bloomberg')
-# def bloomberg_articles():
-  
-#   bloomberg = get_article('bloomberg')
-  
-#   return render_template('articles.html', bloomberg=bloomberg)
 
 @main.route('/Articles/<id>')
 def Articles(id):
